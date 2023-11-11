@@ -71,3 +71,12 @@ module.exports = {
    sortArray,
    buscoInterseccion,
 };
+
+.header {
+   height: 100px;
+   width: 100%;
+   margin: 0;
+   padding: 20px;
+   text-align: center;
+   background-color: aqua;
+}
