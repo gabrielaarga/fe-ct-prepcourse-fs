@@ -34,6 +34,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+
+
    return array.push(elemento);
 }
 
@@ -50,12 +52,20 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+   return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+
+   for (var i = 0; i < array.length ; i ++){
+      if (array[i] === elemento){
+         return true;
+      }
+      else return false
+   }
 }
 
 function agregarNumeros(arrayOfNums) {
