@@ -63,27 +63,45 @@ function arrayContiene(array, elemento) {
    for (var i = 0; i < array.length ; i ++){
       if (array[i] === elemento){
          return true;
+      
       }
-      else return false
    }
+   return false;
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   var acumulador = 0;
+   for (var i = 0 ; i < arrayOfNums.length ; i ++){
+     acumulador = acumulador + arrayOfNums[i]
+  }
+return acumulador;
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var acumulador = 0;
+   for ( var i = 0 ; i < resultadosTest.length ; i ++){
+      acumulador = acumulador + resultadosTest[i]
+   }
+   return acumulador / resultadosTest.length;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
-   // Tu código:
+   // Tu código]
+   var mayor = 0;
+   for ( var i = 0 ; i < arrayOfNums.length ; i ++){
+      if (arrayOfNums[i] > mayor){
+         mayor = arrayOfNums[i];
+      }
+   }
+   return mayor;
 }
 
 function multiplicarArgumentos() {
@@ -91,11 +109,30 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var acumulador = 1;
+   if (arguments.length===0){
+      return 0;
+   }else if (arguments.length === 1){
+      return arguments[0];
+   }else {
+      for ( var i = 0 ; i < arguments.length ; i ++) {
+         acumulador = acumulador * arguments[i]
+
+      }
+   }
+   return acumulador;
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   var contador = 0;
+   for ( var i = 0 ; i < array.length ; i ++){
+      if (array[i] > 18 ){
+         contador += 1
+      }
+   }
+   return contador;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -103,6 +140,8 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   if( numeroDeDia === 7 || numeroDeDia === 1) return "Es fin de semana";
+   else if ( numeroDeDia > 1 && numeroDeDia < 7)return "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
